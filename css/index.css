@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5 {
 
 
 .container {
-	width: 800px;
+	width: 80%;;
 	margin: auto;
 }
 
@@ -180,26 +180,86 @@ footer {
 /************ MEDIA QUERIES ************/
 
 @media screen and (max-width: 800px) {
-    body {
-        background-color: grey;
-    }
-
     header {
+        flex-direction: column-reverse;
+    }
+    .logo-container {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
+        margin-bottom: 40px;
     }
 
-    .nav nav a {
-        width: 80%;
+    .main-banner img{
+       display: none;
     }
+
+    .main-banner .banner-text{
+        margin-bottom: 20px;
+    }
+
 
 }
 
 @media screen and (max-width: 500px) {
-    body {
-        background-color: white;
+    .container {
+        width: 95%;
     }
 
+    header nav{
+    
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav a:nth-child(1){
+        border-top: 1px solid black;
+    }
+
+    header nav a{
+        display: flex;
+        border-bottom: 1px solid black;
+        height: 40px;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5%;
+    }
+
+    .content-1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-1 .features{
+    
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .content-1 .about{
+        
+        width: 100%;
+    }
+
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-2 div {
+        margin-bottom: 30px;
+    }
+
+    .content-2 .services {
+        width:100%;
+    }
+
+    .content-2 .product {
+        width:100%;
+    }
+
+    .content-2 .vision {
+        width:100%;
+    }
 
 }
